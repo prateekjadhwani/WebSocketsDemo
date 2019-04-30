@@ -14,6 +14,10 @@ function handleSocketOperations() {
   socket.addEventListener('message', (event) => {
       handleEventData(event.data);
   });
+
+  socket.addEventListener('error', (event) => {
+      handleError();
+  });
 }
 
 function handleEventData(data) {
@@ -84,6 +88,18 @@ function createNewStockItem(stockName, stockVal) {
   `;
 
   return div;
+}
+
+function handleError() {
+  let domContainer = document.querySelector('.stock__container');
+
+  domContainer.innerHTML = `
+    <p>Looks like there is a mixed content error.(See console to understand what it is);</p>
+    <p>But you can fix it!!</p>
+    <p>Just click on the shied icon in the address bar, and allow mixed scripts</p>
+    <p>Or you might simply be offline</p>
+    <p>¯/\_(ツ)_/¯</p>
+  `;
 }
 
 // Lets start the fun stuff

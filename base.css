@@ -1,0 +1,33 @@
+.stock__container {
+  display: block;
+  border: 1px solid #bbbaba;
+}
+.stock__item {
+  display: flex;
+  border-bottom: 1px solid #bbbaba;
+  text-transform: uppercase;
+}
+.stock__item__name, .stock__item__val, .stock__item__time {
+  padding: 10px;
+  background-color: #f1eded;
+  width: 200px;
+  margin: 0;
+}
+.stock__item__val {
+  flex: 1;
+}
+
+.stock__item__val, .stock__item__time {
+  border-left: 1px solid #bbbaba;
+}
+
+.stock__item--gain .stock__item__val{
+  background-color: #b8f7b8;
+}
+.stock__item--loss .stock__item__val{
+  background-color: #f9b3b3;
+}
+.stock__item__time {
+  font-size: 12px;
+  text-transform: lowercase;
+}

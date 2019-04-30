@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Stocks</title>
+    <link rel="stylesheet" type="text/css" href="base.css">
+  </head>
+  <body>
+
+    <!-- This is where the stocks are shown -->
+    <div class="stock__container"></div>
+
+    <script type="text/javascript" src="./main.js"></script>
+
+    <script type="module">
+
+      import TimeManager from './time-manager.js';
+
+      // We are now defining the custom element
+      customElements.define('time-manager', TimeManager);
+    </script>
+  </body>
+</html>
